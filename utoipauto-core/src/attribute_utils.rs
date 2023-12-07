@@ -3,9 +3,9 @@ use syn::Attribute;
 
 pub fn update_openapi_macro_attributes(
     macro_attibutes: &mut Vec<Attribute>,
-    uto_paths: &String,
-    uto_models: &String,
-    uto_reponses: &String,
+    uto_paths: &str,
+    uto_models: &str,
+    uto_reponses: &str,
 ) {
     let mut is_ok = false;
     #[warn(clippy::needless_range_loop)]
@@ -29,9 +29,9 @@ pub fn update_openapi_macro_attributes(
 /// Build the new openapi macro attribute with the newly discovered paths
 pub fn build_new_openapi_attributes(
     src_uto_macro: String,
-    uto_paths: &String,
-    uto_models: &String,
-    uto_reponses: &String,
+    uto_paths: &str,
+    uto_models: &str,
+    uto_reponses: &str,
 ) -> Attribute {
     let paths = extract_paths(src_uto_macro.clone());
     let schemas = extract_schemas(src_uto_macro.clone());

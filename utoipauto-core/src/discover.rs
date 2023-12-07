@@ -41,7 +41,7 @@ pub fn discover_from_file(src_path: String) -> (Vec<String>, Vec<String>, Vec<St
     (fns_name, models_name, responses_name)
 }
 
-fn build_path(file_name: &String, fn_name: &String) -> String {
+fn build_path(file_name: &str, fn_name: &str) -> String {
     format!("{}::{}", extract_module_name_from_path(file_name), fn_name)
 }
 

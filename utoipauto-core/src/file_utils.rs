@@ -57,7 +57,7 @@ fn is_rust_file(path: &PathBuf) -> bool {
 /// "crate::tests::controllers::controller1".to_string()
 /// );
 /// ```
-pub fn extract_module_name_from_path(path: &String) -> String {
+pub fn extract_module_name_from_path(path: &str) -> String {
     let mut path = path.to_string();
     if path.ends_with(".rs") {
         path = path.replace(".rs", "");
